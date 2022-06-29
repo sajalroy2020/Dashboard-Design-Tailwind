@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,700;1,200;1,300;1,400;1,500;1,600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.custom-font{
+    font-family: 'Oswald', sans-serif;
+}
+.custom-font-2{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.mx-wiidth{
+    padding: 0px 40px;
+    margin: auto;
+}
+
+
+
+
+
+
+
+.menu-list{
+    width: 480px;
+    min-height: 100vh;
+    transition: 0.8s;
+}
+.menu-list.open{
+    width: 170px;
+    transition: 0.5s;
+}
+.menu-list.open ul li a .text {
+    opacity: 1;
+    padding-left: 0;
+    transition: 0.1s;
+}
+.menu-list.open ul li a{
+  display: block;
+  padding: 15px 10px;
+  text-align: center;
+}
+.menu-list.open ul li a img{
+  width: 15%;
+  display: flex;
+  margin: 0px auto;
+}
+.menu-toggle {
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .navigation .menu-toggle::before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background: #000;
+    transform: translateY(-8px);
+    transition: 0.5s;
+  }
+  
+  .navigation.open .menu-toggle::before {
+    transform: translateY(0) rotate(45deg);
+  }
+  
+  .navigation .menu-toggle::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background: #000;
+    transform: translateY(8px);
+    transition: 0.5s;
+    box-shadow: 0 -8px 0 #000;
+  }
+  
+  .navigation.open .menu-toggle::after {
+    transform: translateY(0) rotate(-45deg);
+    box-shadow: none;
+  }
+  
+
+
+
+  .custom-shadow{
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+  }
+
+  .border-rounding{
+    border-radius: 15px;
+  }
